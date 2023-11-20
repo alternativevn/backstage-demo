@@ -26,7 +26,7 @@ integrations:
   github:
     - host: github.com
 
-      token: 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
+      token: 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
 
 
 techdocs:
@@ -41,8 +41,8 @@ auth:
   providers:
     github:
       development:
-        clientId: 79d94ad95c4b80ee109e
-        clientSecret: 24c463d0e948006e0b36363c05a5c10057ff8092
+        clientId: 0315870949ad6075ac9f
+        clientSecret: 4f5a963cd56d51398caa8704e53ff0a93cc81c47
 
 scaffolder:
   defaultAuthor:
@@ -54,7 +54,7 @@ catalog:
     entityFilename: catalog-info.yaml
     pullRequestBranchName: backstage-integration
   rules:
-    - allow: [Component, System, API, Resource, Location]
+    - allow: [Component, System, API, Resource, Location, Template]
   locations:
     - type: file
       target: ../../examples/entities.yaml
@@ -69,6 +69,16 @@ catalog:
 
     - type: url
       target: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/all.yaml
+
+    - type: url
+      target: https://github.com/alternativevn/software-templates/blob/main/scaffolder-templates/create-react-app/template.yaml
+      rules:
+        - allow: [Template]
+
+    - type: url
+      target: https://github.com/alternativevn/software-templates/blob/main/scaffolder-templates/pull-request/template.yaml
+      rules:
+        - allow: [Template]
 
     # - type: url
     #   target: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/acme-corp.yaml
